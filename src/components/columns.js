@@ -1,15 +1,19 @@
 import { format } from "date-fns";
+import ColumnFilter from "./ColumnFilter";
 
 export const COLUMNS = [
   {
     Header: "Id",
     Footer: "Id",
     accessor: "id",
+    // Filter: ColumnFilter,
+    disableFilters: true,
   },
   {
     Header: "First Name",
     Footer: "First Name",
     accessor: "first_name",
+    // Filter: ColumnFilter,
   },
   {
     Header: "Last Name",
@@ -23,16 +27,19 @@ export const COLUMNS = [
     Cell: ({ value }) => {
       return format(new Date(value), "dd/MM/yyyy");
     },
+    // Filter: ColumnFilter,
   },
   {
     Header: "Country",
     Footer: "Country",
     accessor: "country",
+    // Filter: ColumnFilter,
   },
   {
     Header: "Phone",
     Footer: "Phone",
     accessor: "phone",
+    //Filter: ColumnFilter,
   },
 ];
 export const GROUPED_COLUMNS = [
