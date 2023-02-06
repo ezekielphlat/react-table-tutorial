@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { useTable, usePagination } from "react-table";
+import { useTable, usePagination, useSortBy } from "react-table";
 import MOCK_DATA from "./MOCK_DATA.json";
 import { COLUMNS, GROUPED_COLUMNS } from "./columns";
 import "./table.css";
@@ -25,6 +25,7 @@ function PaginationTable() {
     prepareRow,
   } = useTable(
     { columns, data, initialState: { pageIndex: 0 } },
+
     usePagination
   );
   const { pageIndex, pageSize } = state;

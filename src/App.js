@@ -6,7 +6,7 @@ import FilteringTable from "./components/FilteringTable";
 import PaginationTable from "./components/PaginationTable";
 
 function App() {
-  return <PaginationTable />;
+  return <FilteringTable />;
 }
 
 export default App;
